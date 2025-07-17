@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const bInst = document.getElementById("bInst");
     const modal= document.getElementById("mInstruccion")
     const cerrar=document.getElementById("cerrarModal")
-    const mina = new buscarM();
+    const mina = new buscarM(); 
     let archCargado = false;
     fileInput.addEventListener("change", function (event) {
         const file = event.target.files[0];

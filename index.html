@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lector de archivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="assets/logo.png" alt="Mina Geologica" class="logo">
+        <button class=boton-a id='bInst'>Instrucciones</button>
+    </nav>
+    <main class="main">
+        <div class="content-overlay"> </div>
+            <div class="texto-container">
+                <div class="titulos">
+                    <h1 class="busca"> Busca </h1>
+                    <h1 class="minas">   Minas</h1>
+                </div>
+                <div class=sub-contenedor>
+                    <p class ="subtitulo">
+                        Programa especializado para detectar minas </p>
+                </div>
+            </div>
+    </main>
+    <div class="ejecucion">
+            <h2 class="titulo2">Analizar  Mapa</h2>
+            <div class="linea"></div>
+    </div>
+    <div class=subir-arch>
+        <p class ="analizarM">
+                Subir el archivo con la información necesaria
+                para poder analizar el mapa y localizar posibles minas.
+        </p>
+        <div class="botones-cont">
+            <input type="file" id="fileInput" class="oculto" accept=".txt, .in">
+            <label for="fileInput" class="boton-a">Seleccionar archivo</label>
+            <button id="procesar" class="boton-a">Procesar archivo</button>
+            <button class='boton-a' style='display:none' id='descarga'>Descargar Archivo </button>
+        </div>
+    </div>
+    <div class="contenidoI" id="contenidoI" style="display:none">
+        <img src="assets/mapa3d.png" alt="Mapa" class="imagenM">
+        <div class="cont-archi">
+            <div class="texto-arch" id="fileContent">
+            </div>
+        </div>
+    </div>
+
+    <div id="mInstruccion" style="display: none;" class="modal">
+        <div class="modal-box">
+            <span id="cerrarModal" class="cerrar">✖</span>
+            <h3>Instrucciones <hr> <br></h3>
+            <ul>
+                <li>Selecciona un archivo <strong>.in</strong> que contenga los valores de densidad de cada posición de la matriz.</li>
+                <br>
+                <li>Súbelo haciendo clic en el botón <strong>Seleccionar Archivo</strong>.</li>
+                <br>
+                <li>Para visualizar las minas detectadas, haz clic en el botón <strong>Procesar</strong>.</li>
+                <br>
+                <li>Después podrás descargar el archivo con los datos de las minas encontradas haciendo clic en <strong>Descargar Archivo</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="buscaMinas.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
